@@ -9,9 +9,9 @@ import java.io.*;
 /**
  * Created by Smile on 2018/11/12.
  */
-public class ObjectInpustreamDemon {
+public class ObjectInpustreamDemo {
 
-    private static Logger logger = LoggerFactory.getLogger(ObjectInpustreamDemon.class);
+    private static Logger logger = LoggerFactory.getLogger(ObjectInpustreamDemo.class);
 
     public static void main(String[] args) {
         String pathname = PropUtils.get("pathname");

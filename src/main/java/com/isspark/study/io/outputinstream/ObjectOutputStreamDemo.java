@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
-public class ObjectOutputStreamDemon {
+public class ObjectOutputStreamDemo {
 
-    private static Logger logger = LoggerFactory.getLogger(ObjectOutputStreamDemon.class);
+    private static Logger logger = LoggerFactory.getLogger(ObjectOutputStreamDemo.class);
 
     public static void main(String[] args) {
         String pathname = PropUtils.get("pathname");

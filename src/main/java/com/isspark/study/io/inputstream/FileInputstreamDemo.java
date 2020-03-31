@@ -9,9 +9,9 @@ import java.io.*;
 /**
  * Created by Smile on 2018/11/7.
  */
-public class FileInputstreamDemon {
+public class FileInputstreamDemo {
 
-    private static Logger logger = LoggerFactory.getLogger(FileInputstreamDemon.class);
+    private static Logger logger = LoggerFactory.getLogger(FileInputstreamDemo.class);
 
     public static void main(String[] args) {
         read("D:\\test.txt");

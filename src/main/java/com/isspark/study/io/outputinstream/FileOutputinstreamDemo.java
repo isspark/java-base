@@ -2,7 +2,7 @@ package com.isspark.study.io.outputinstream;
 
 import java.io.*;
 
-public class FileOutputinstreamDemon {
+public class FileOutputinstreamDemo {
 
     public static void main(String[] args) {
         write("this is new line");
