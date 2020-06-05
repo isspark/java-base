@@ -1,6 +1,6 @@
 package com.isspark.study.thread;
 
-import java.util.concurrent.Callable;
+import java.util.concurrent.*;
 
 /**
  * @version V1.0
@@ -17,8 +17,20 @@ public class ThreadCreateTest {
         Runnable runnable = new RunnalbeDemo("002");
         new Thread(runnable).start();
 
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
         CallableDemo callable = new CallableDemo("003");
+        FutureTask<String> ft = new FutureTask<>(callable);
+        executorService.execute(ft);
         System.out.println(callable.call());
+        try {
+            System.out.println(ft.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }finally {
+            executorService.shutdown();
+        }
     }
 }
 
