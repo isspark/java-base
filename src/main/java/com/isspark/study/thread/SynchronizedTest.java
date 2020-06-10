@@ -10,7 +10,12 @@ package com.isspark.study.thread;
  */
 public class SynchronizedTest {
 
-    volatile Integer a;
     public static void main(String[] args) {
+        SynchronizedTest t = new SynchronizedTest();
+        synchronized(t) {
+            synchronized(t) {
+                System.out.println("made it!");
+            }
+        }
     }
 }
