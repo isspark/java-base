@@ -16,15 +16,22 @@ import java.util.stream.StreamSupport;
 public class VolatileTest {
 
     public static void main(String[] args) {
-        VolatileThread thread = new VolatileThread();
-        thread.start();
-        while (true){
-//            System.out.println(thread.isFlag());
-            if(thread.isFlag()){
-                System.out.println("stop run，flag:"+thread.isFlag());
-                break;
-            }
-        }
+//        VolatileThread thread = new VolatileThread();
+//        thread.start();
+//        while (true){
+////            System.out.println(thread.isFlag());
+//            if(thread.isFlag()){
+//                System.out.println("stop run，flag:"+thread.isFlag());
+//                break;
+//            }
+//        }
+
+        new Thread(()->{
+            VolatileThread2.two();
+        }).start();
+        new Thread(()->{
+            VolatileThread2.one();
+        }).start();
 //        new Thread(() -> {
 //            IntStream.range(1,1000).forEach(i -> VolatileThread2.one());
 //        }).start();
