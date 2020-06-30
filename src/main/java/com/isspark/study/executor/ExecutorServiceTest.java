@@ -13,15 +13,29 @@ public class ExecutorServiceTest {
 
     public static void main(String[] args) {
 
-        ThreadFactory threadFactory = Executors.defaultThreadFactory();
-        BlockingQueue<Runnable> linkedBlockingDeque = new LinkedBlockingDeque<Runnable>(
+//        ThreadFactory threadFactory = Executors.defaultThreadFactory();
+        BlockingQueue<Runnable> linkedBlockingDeque = new LinkedBlockingDeque<>(
                 100);
-        ThreadPoolExecutor pool = new ThreadPoolExecutor(5,10, 0L,TimeUnit.MICROSECONDS,linkedBlockingDeque);
+        ExecutorService pool = new ThreadPoolExecutor(5,10, 2L,TimeUnit.MICROSECONDS,linkedBlockingDeque);
 
+        Executors.newFixedThreadPool(10);
+        Executors.newSingleThreadExecutor();
+        Executors.newCachedThreadPool();
+        Executors.newScheduledThreadPool(10);
+        Executors.newSingleThreadScheduledExecutor();
         //不建议使用Executors创建线程池
         //ExecutorService executorService =  Executors.newCachedThreadPool();
 //        pool.submit(new PoolTest());
         pool.execute(new PoolTest());
+        Future<String> future = pool.submit(new CallableTest());
+
+        try {
+            System.out.println(future.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
         pool.shutdown();
     }
 
@@ -32,6 +46,14 @@ class PoolTest implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Hello,World!");
+        System.out.println("Hello,World1!");
+    }
+}
+
+class CallableTest implements Callable<String>{
+
+    @Override
+    public String call(){
+        return "Hello,World2!";
     }
 }
