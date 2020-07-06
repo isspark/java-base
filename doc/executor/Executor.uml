@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.concurrent.Executor</OriginalElement>
+  <nodes>
+    <node x="48.00000000000003" y="158.0">java.util.concurrent.AbstractExecutorService</node>
+    <node x="136.00000000000003" y="237.0">java.util.concurrent.ThreadPoolExecutor</node>
+    <node x="274.0" y="0.0">java.util.concurrent.Executor</node>
+    <node x="0.0" y="237.0">java.util.concurrent.ForkJoinPool</node>
+    <node x="243.0" y="158.0">java.util.concurrent.ScheduledExecutorService</node>
+    <node x="321.25" y="79.0">java.util.concurrent.CompletableFuture.ThreadPerTaskExecutor</node>
+    <node x="186.875" y="316.0">java.util.concurrent.ScheduledThreadPoolExecutor</node>
+    <node x="170.25000000000003" y="79.0">java.util.concurrent.ExecutorService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.concurrent.CompletableFuture.ThreadPerTaskExecutor" target="java.util.concurrent.Executor">
+      <point x="0.0" y="-14.5" />
+      <point x="406.25" y="54.0" />
+      <point x="344.5" y="54.0" />
+      <point x="23.5" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.AbstractExecutorService" target="java.util.concurrent.ExecutorService">
+      <point x="0.0" y="-14.5" />
+      <point x="135.50000000000003" y="133.0" />
+      <point x="203.00000000000003" y="133.0" />
+      <point x="-32.75" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="-52.25" y="-14.5" />
+      <point x="239.125" y="291.0" />
+      <point x="213.00000000000003" y="291.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.ForkJoinPool" target="java.util.concurrent.AbstractExecutorService">
+      <point x="0.0" y="-14.5" />
+      <point x="58.0" y="212.0" />
+      <point x="91.75000000000003" y="212.0" />
+      <point x="-43.75" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ScheduledExecutorService">
+      <point x="52.25" y="-14.5" />
+      <point x="343.625" y="291.0" />
+      <point x="336.0" y="291.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
+      <point x="-2.8421709430404007E-14" y="-14.5" />
+      <point x="235.75" y="54.0" />
+      <point x="297.5" y="54.0" />
+      <point x="-23.5" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.AbstractExecutorService">
+      <point x="-2.8421709430404007E-14" y="-14.5" />
+      <point x="213.0" y="212.0" />
+      <point x="179.25000000000003" y="212.0" />
+      <point x="43.75" y="14.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledExecutorService" target="java.util.concurrent.ExecutorService">
+      <point x="0.0" y="-14.5" />
+      <point x="336.0" y="133.0" />
+      <point x="268.5" y="133.0" />
+      <point x="32.74999999999997" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="222.0" y="172.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
