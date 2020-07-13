@@ -21,6 +21,7 @@ public class CountDownLatchTest {
         });
         startSignal.countDown();
         doneSignal.await();
+        System.out.println("all thread finshed!");
     }
 }
 
@@ -46,8 +47,8 @@ class CDLTest implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }finally {
-            doneSignal.countDown();
             System.out.println("线程"+threadNo+"执行完成...");
+            doneSignal.countDown();
         }
     }
 
